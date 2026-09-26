@@ -1,0 +1,335 @@
+body {
+    background: url('fundo4.jpg') center/cover fixed;
+    min-height: 100vh;
+    margin: 0;
+}
+@font-face {
+    font-family: 'myFont';
+    src: url('Blackadder ITC.ttf') format('truetype'); 
+}
+::selection {
+    background: #D4C3B3; 
+    color: #3B2F27; 
+}
+h1 {
+    font: 100px 'myFont', cursive, sans-serif; 
+    color: #4A3A31; 
+    text-shadow: 2px 2px 0 #EADDCF; 
+    text-align: center;
+    margin: 40px 0 6px; 
+    position: relative;
+}
+h2 {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 32px;
+    color: #5C4A3E;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: -10px 0 30px; 
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+}
+.linha {
+    border: none;
+    height: 3px;             
+    background: #A68A73; 
+    width: 60%;                
+    margin: 0 auto;            
+}
+.conteudo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 40px; 
+    padding: 0 20px 60px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.container-lateral {
+    flex: 1; 
+    max-width: 600px; 
+    min-width: 320px; 
+    background: rgba(250, 245, 240, 0.7); 
+    border: 2px solid #D4C3B3; 
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(8px);
+    position: relative;
+}
+.container-lateral::before,
+.container-lateral::after {
+    content: "❦";
+    position: absolute;
+    font-size: 22px;
+    color: #A68A73;
+    opacity: .8;
+}
+.container-lateral::before { top: 8px; left: 16px; }
+.container-lateral::after { bottom: 8px; right: 16px; transform: scaleX(-1); }
+.titulo-central {
+    font: 28px 'Century Gothic', sans-serif;
+    color: #5C4A3E;
+    text-align: center;
+    margin: 0 0 15px;
+}
+.texto-lateral {
+    font: 18px/1.6 'Century Gothic', sans-serif;
+    color: #4A3A31; 
+    text-align: justify;
+    margin: 0;
+}
+.coluna-caixas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+.caixa-hover {
+    width: 250px;
+    background: rgba(250, 245, 240, 0.55);
+    border: 2px solid #D4C3B3;
+    border-radius: 15px;
+    padding: 22px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: .4s;
+    overflow: hidden;
+    position: relative; 
+    z-index: 1; 
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+a.caixa-hover:visited { color: inherit; }
+.caixa-hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(250, 245, 240, 0.85); 
+    z-index: -1; 
+    transition: .4s;
+}
+.caixa-hover h3 {
+    font: 22px 'Century Gothic', sans-serif;
+    color: #5C4A3E;
+    margin: 6px 0 0;
+    transition: .3s;
+}
+.selo-local {
+    display: inline-block;
+    background: rgba(166, 138, 115, .18);
+    border: 1px solid #D4C3B3;
+    border-radius: 20px;
+    padding: 3px 14px;
+    font: 12px 'Century Gothic', sans-serif;
+    letter-spacing: .5px;
+    color: #5C4A3E;
+    margin-bottom: 8px;
+}
+.texto-caixa {
+    font: 15px/1.5 'Century Gothic', sans-serif;
+    color: #4A3A31;
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    transition: .4s;
+}
+.saiba-mais {
+    display: block;
+    max-height: 0;
+    opacity: 0;
+    font: bold 13px 'Century Gothic', sans-serif;
+    color: #8B5E34;
+    margin-top: 10px;
+    transition: .4s;
+}
+.caixa-hover:hover,
+.caixa-hover:focus-visible {
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(166, 138, 115, 0.5); 
+}
+.caixa-hover:hover::before {
+    background: rgba(255, 252, 248, 0.95); 
+}
+.caixa-hover:hover h3 {
+    color: #2E221B; 
+}
+.caixa-hover:hover .texto-caixa {
+    max-height: 250px; 
+    opacity: 1; 
+    margin-top: 12px;
+}
+.caixa-hover:hover .saiba-mais {
+    max-height: 40px;
+    opacity: 1;
+}
+.icone-milagre {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    position: relative;
+    background:
+        radial-gradient(circle, #FFFBF2 0 40%, transparent 41%),
+        repeating-conic-gradient(#C9A24B 0deg 5deg, transparent 5deg 20deg);
+    box-shadow: 0 0 16px rgba(201, 162, 75, .55);
+}
+.icone-milagre::after {
+    content: "✝";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #7A4B2A;
+    font-weight: bold;
+}
+.box-2 .icone-milagre { filter: hue-rotate(-18deg) saturate(1.2); }
+.box-3 .icone-milagre { filter: hue-rotate(8deg); }
+.box-4 .icone-milagre { filter: hue-rotate(-32deg) saturate(1.35); }
+
+.icone-milagre.grande {
+    width: 84px;
+    height: 84px;
+}
+.icone-milagre.grande::after { font-size: 32px; }
+.divisor-ornado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 55%;
+    max-width: 420px;
+    margin: 6px auto 34px;
+    color: #A68A73;
+}
+.divisor-ornado::before,
+.divisor-ornado::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #D4C3B3, transparent);
+}
+.divisor-ornado span {
+    font-size: 20px;
+    color: #A68A73;
+}
+.cta-botao {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 14px 34px;
+    background: linear-gradient(135deg, #C9A24B, #A68A73);
+    color: #FFF8EC !important;
+    text-decoration: none;
+    border-radius: 50px;
+    font: bold 16px 'Century Gothic', sans-serif;
+    letter-spacing: .5px;
+    box-shadow: 0 6px 18px rgba(92, 74, 62, .35);
+    transition: .3s;
+    text-align: center;
+}
+.cta-botao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(92, 74, 62, .45);
+}
+.cta-secundario {
+    background: transparent;
+    border: 2px solid #A68A73;
+    color: #5C4A3E !important;
+    box-shadow: none;
+}
+.bloco-cta {
+    text-align: center;
+    margin-top: 10px;
+}
+.milagre-secao {
+    scroll-margin-top: 140px;
+    padding: 18px 0;
+    border-bottom: 1px dashed #D4C3B3;
+}
+.milagre-secao:last-child { border-bottom: none; }
+.milagre-cabecalho {
+    text-align: center;
+}
+.menu-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: rgba(250, 245, 240, 0.7); 
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 195, 179, 0.8);
+  border-radius: 50px; 
+  width: 90%;
+  max-width: 1000px; 
+  margin: 30px auto;
+  box-shadow: 0 8px 25px rgba(92, 74, 62, 0.15); 
+  padding: 5px;
+}
+.menu-links {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;         
+  scroll-behavior: smooth;  
+  white-space: nowrap;      
+  gap: 15px;                
+  padding: 10px 50px;       
+  width: 100%;
+  scroll-snap-type: x mandatory; 
+  align-items: center;
+}
+.item-menu {
+  color: #5C4A3E; 
+  text-decoration: none;
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px; 
+  scroll-snap-align: start; 
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+.item-menu:hover,
+.item-menu.ativo {
+  background: rgba(166, 138, 115, 0.2); 
+  color: #2E221B;
+  transform: translateY(-2px); 
+}
+.menu-links::-webkit-scrollbar {
+  display: none; 
+}
+.menu-links {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+.seta {
+  background: #D4C3B3;
+  color: #4A3A31; 
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  user-select: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-size: 18px;
+  text-decoration: none;
+}
+.seta-esquerda { left: 10px; }
+.seta-direita { right: 10px; }
+.seta:hover {
+  background: #A68A73;
+  color: #FFF;
+  transform: scale(1.1); /
+}
+@media (max-width: 720px) {
+    h1 { font-size: 60px; }
+    .coluna-caixas { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+    .caixa-hover { width: 260px; }
+}
