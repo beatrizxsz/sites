@@ -267,15 +267,16 @@ a.caixa-hover:visited { color: inherit; }
 }
 .menu-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   overflow-x: auto;         
   scroll-behavior: smooth;  
   white-space: nowrap;      
   gap: 15px;                
-  padding: 10px 50px;       
+  padding: 10px 15px;       
   width: 100%;
   scroll-snap-type: x mandatory; 
   align-items: center;
+  -webkit-overflow-scrolling: touch;
 }
 .item-menu {
   color: #5C4A3E; 
@@ -348,5 +349,12 @@ a.caixa-hover:visited { color: inherit; }
 
   .caixa-texto {
     width: 60%; 
+  }
+}
+ /* ADICIONE ISSO AQUI: Ajusta o menu para telas grandes */
+  .menu-links {
+    justify-content: center; /* Centraliza os links no notebook */
+    padding: 10px 50px;      /* Devolve o espaçamento elegante no computador */
+    overflow-x: visible;     /* Desativa a rolagem desnecessária no note */
   }
 }
