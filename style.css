@@ -264,6 +264,7 @@ a.caixa-hover:visited { color: inherit; }
   margin: 30px auto;
   box-shadow: 0 8px 25px rgba(92, 74, 62, 0.15); 
   padding: 5px;
+  overflow: hidden; /* Mantém as setas presas dentro dos limites da barra redonda */
 }
 .menu-links {
   display: flex;
@@ -272,11 +273,16 @@ a.caixa-hover:visited { color: inherit; }
   scroll-behavior: smooth;  
   white-space: nowrap;      
   gap: 15px;                
-  padding: 10px 15px;       
+  padding: 10px 45px; /* Abre espaço nas pontas para os links não sumirem sob as setas */      
   width: 100%;
   scroll-snap-type: x mandatory; 
   align-items: center;
   -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+.menu-links::-webkit-scrollbar {
+  display: none; 
 }
 .item-menu {
   color: #5C4A3E; 
@@ -295,13 +301,6 @@ a.caixa-hover:visited { color: inherit; }
   background: rgba(166, 138, 115, 0.2); 
   color: #2E221B;
   transform: translateY(-2px); 
-}
-.menu-links::-webkit-scrollbar {
-  display: none; 
-}
-.menu-links {
-  -ms-overflow-style: none;  
-  scrollbar-width: none;  
 }
 .seta {
   background: #D4C3B3;
@@ -322,18 +321,22 @@ a.caixa-hover:visited { color: inherit; }
   font-size: 18px;
   text-decoration: none;
 }
-.seta-esquerda { left: 10px; }
-.seta-direita { right: 10px; }
+.seta-esquerda { left: 5px; }
+.seta-direita { right: 5px; }
 .seta:hover {
   background: #A68A73;
   color: #FFF;
-  transform: scale(1.1); /
+  transform: scale(1.1);
 }
+
+/* Configurações para Celular (Até 720px) */
 @media (max-width: 720px) {
-    h1 { font-size: 60px; }
+    h1 { font-size: 50px; margin: 20px 0 6px; }
+    h2 { font-size: 20px; }
     .coluna-caixas { flex-direction: row; flex-wrap: wrap; justify-content: center; }
     .caixa-hover { width: 260px; }
 }
+
 /* Configuração para Notebooks e Computadores (Telas a partir de 768px) */
 @media (min-width: 768px) {
   .conteiner {
@@ -342,19 +345,18 @@ a.caixa-hover:visited { color: inherit; }
     margin: 0 auto;    
     padding: 40px;
   }
-
   .caixa-foto {
     width: 40%; 
   }
-
   .caixa-texto {
     width: 60%; 
   }
-}
- /* ADICIONE ISSO AQUI: Ajusta o menu para telas grandes */
   .menu-links {
-    justify-content: center; /* Centraliza os links no notebook */
-    padding: 10px 50px;      /* Devolve o espaçamento elegante no computador */
-    overflow-x: visible;     /* Desativa a rolagem desnecessária no note */
+    justify-content: center; /* Centraliza a navegação no computador */
+    overflow-x: visible;     /* Remove rolagem desnecessária no notebook */
+    padding: 10px 15px;
+  }
+  .seta {
+    display: none; /* Esconde as setas no notebook, já que o menu cabe inteiro */
   }
 }
