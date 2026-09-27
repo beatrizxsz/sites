@@ -183,6 +183,7 @@ a.caixa-hover:visited { color: inherit; }
     font-size: 24px;
     color: #7A4B2A;
     font-weight: bold;
+    font-variant-emoji: text; /* Recomendo esta: código moderno e elegante */
 }
 .box-2 .icone-milagre { filter: hue-rotate(-18deg) saturate(1.2); }
 .box-3 .icone-milagre { filter: hue-rotate(8deg); }
