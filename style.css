@@ -183,7 +183,7 @@ a.caixa-hover:visited { color: inherit; }
     font-size: 24px;
     color: #7A4B2A;
     font-weight: bold;
-    font-variant-emoji: text; /* Recomendo esta: código moderno e elegante */
+    font-variant-emoji: text; 
 }
 .box-2 .icone-milagre { filter: hue-rotate(-18deg) saturate(1.2); }
 .box-3 .icone-milagre { filter: hue-rotate(8deg); }
@@ -214,7 +214,7 @@ a.caixa-hover:visited { color: inherit; }
 .divisor-ornado span {
     font-size: 20px;
     color: #A68A73;
-    font-variant-emoji: text; /* FORÇA o navegador do celular a usar a versão texto em vez do emoji roxo */
+    font-variant-emoji: text;
 }
 .cta-botao {
     display: inline-block;
@@ -266,7 +266,7 @@ a.caixa-hover:visited { color: inherit; }
   margin: 30px auto;
   box-shadow: 0 8px 25px rgba(92, 74, 62, 0.15); 
   padding: 5px;
-  overflow: hidden; /* Mantém as setas presas dentro dos limites da barra redonda */
+  overflow: hidden; 
 }
 .menu-links {
   display: flex;
@@ -275,7 +275,7 @@ a.caixa-hover:visited { color: inherit; }
   scroll-behavior: smooth;  
   white-space: nowrap;      
   gap: 15px;                
-  padding: 10px 45px; /* Abre espaço nas pontas para os links não sumirem sob as setas */      
+  padding: 10px 45px;  
   width: 100%;
   scroll-snap-type: x mandatory; 
   align-items: center;
@@ -338,8 +338,6 @@ a.caixa-hover:visited { color: inherit; }
     .coluna-caixas { flex-direction: row; flex-wrap: wrap; justify-content: center; }
     .caixa-hover { width: 260px; }
 }
-
-/* Configuração para Notebooks e Computadores (Telas a partir de 768px) */
 @media (min-width: 768px) {
   .conteiner {
     flex-direction: row; 
@@ -354,11 +352,11 @@ a.caixa-hover:visited { color: inherit; }
     width: 60%; 
   }
   .menu-links {
-    justify-content: center; /* Centraliza a navegação no computador */
-    overflow-x: visible;     /* Remove rolagem desnecessária no notebook */
+    justify-content: center; 
+    overflow-x: visible;    
     padding: 10px 15px;
   }
   .seta {
-    display: none; /* Esconde as setas no notebook, já que o menu cabe inteiro */
+    display: none;
   }
 }
