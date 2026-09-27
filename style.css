@@ -214,6 +214,13 @@ a.caixa-hover:visited { color: inherit; }
     font-size: 20px;
     color: #A68A73;
 }
+.cruz-estilizada {
+  font-style: normal;
+  font-family: 'Century Gothic', sans-serif; /* Força uma fonte padrão para ignorar o emoji */
+  color: #A68A73;                            /* Garante a cor dourada/marrom do seu tema */
+  text-shadow: none;                         /* Remove qualquer efeito de sombra indesejado */
+  display: inline-block;
+}
 .cta-botao {
     display: inline-block;
     margin-top: 22px;
