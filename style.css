@@ -333,3 +333,20 @@ a.caixa-hover:visited { color: inherit; }
     .coluna-caixas { flex-direction: row; flex-wrap: wrap; justify-content: center; }
     .caixa-hover { width: 260px; }
 }
+/* Configuração para Notebooks e Computadores (Telas a partir de 768px) */
+@media (min-width: 768px) {
+  .conteiner {
+    flex-direction: row; 
+    max-width: 1200px;   
+    margin: 0 auto;    
+    padding: 40px;
+  }
+
+  .caixa-foto {
+    width: 40%; 
+  }
+
+  .caixa-texto {
+    width: 60%; 
+  }
+}
